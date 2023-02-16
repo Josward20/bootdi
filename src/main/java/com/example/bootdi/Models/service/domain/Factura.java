@@ -9,14 +9,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class Factura {
     // @Value("${Factura.descripcion}")
-    public String descripcion = "Factura sin caducidad, cualquier inconveniente comunicarse al siguiente numero";
+    public String descripcion = "Comprobante de entrega, Se aceptan devoluciones luego de los 3 meses ";
     
+
 Cliente cliente2=new Cliente();
     @Autowired
     public Cliente cliente=cliente2;
     
     @Autowired
-    public List<ItemFactura> iteam;
+    public List<ItemFactura> items;
 
     public String getDescripcion() {
         return descripcion;
@@ -35,12 +36,14 @@ Cliente cliente2=new Cliente();
         this.cliente = cliente;
     }
 
-    public List<ItemFactura> getIteam() {
-        return iteam;
+    public List<ItemFactura> getItems() {
+        return items;
     }
 
-    public void setIteam(List<ItemFactura> iteam) {
-        this.iteam = iteam;
+    public void setItems(List<ItemFactura> items) {
+        this.items = items;
     }
+
+
 
 }

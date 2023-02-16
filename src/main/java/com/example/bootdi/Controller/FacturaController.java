@@ -23,7 +23,7 @@ public class FacturaController {
    
     @GetMapping("/formato")
     public String mostrar(ModelMap model){
-model.addAttribute("titulo", "Factura de compra con inyeccion de dependencia");
+model.addAttribute("titulo", "Factura de compra con inyección de dependencia");
  model.addAttribute("factura", fact);
  
 

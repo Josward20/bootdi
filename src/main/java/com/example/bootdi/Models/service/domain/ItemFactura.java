@@ -3,11 +3,10 @@ package com.example.bootdi.Models.service.domain;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ItemFactura {
-     @Autowired
+    @Autowired
     private Producto producto;
-    
-    private int cantidad;
 
+    private int cantidad;
 
     public ItemFactura(Producto producto, int cantidad) {
         this.producto = producto;
